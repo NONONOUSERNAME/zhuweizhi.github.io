@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<!-- saved from url=(0066)https://yqapp.cueb.edu.cn/site/epidehealth/masterqrcode?door_id=10 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=EDGE"><title>健康码</title><style>body{
+        -webkit-text-size-adjust: 100% !important;
+			}
+    	/*.frame-loader {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  margin-left: 10%;
+		  transform: translate3d(-50%, -50%, 0);
+		  background:rgba(0,0,0,0.5);
+		  padding: 10px 40px;
+		  border-radius: 8px;
+		  z-index: 1000;
+		  font-family: PingFang-SC-Medium, 'microsoft yahei', sans-serif;
+		  font-size:14px;
+    	color: #333;
+		}
+		.frame-loader img{
+			width:70px;
+			height: 70px;
+		}
+		.frame-loader p{
+			text-align: center;
+			font-size: 14px;
+			color: #fff;
+		}*/
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, input, textarea{margin:0;padding:0;box-sizing:border-box;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+body,textarea,input,button,select,keygen,legend{color:#333;outline:0;font-family:PingFang-SC-Medium, 'microsoft yahei', sans-serif;}
+input,textarea{-webkit-appearance:none;border:none;outline:none;background:none;-webkit-tap-highlight-color:rgba(255,0,0,0);}
+textarea{overflow:auto;resize:none;}
+a,button{display:block;background:none;border:none;}
+a{-webkit-tap-highlight-color:rgba(255,0,0,0);outline:none;text-decoration:none;}
+img{display: block;}
+		/*.dot {
+		  width: 15px;
+		  height: 15px;
+		  background: #3ac;
+		  border-radius: 100%;
+		  display: inline-block;
+		  animation: slide 1s infinite;
+		}
+		.dot:nth-child(1) {
+		  animation-delay: 0.1s;
+		  background: #32aacc;
+		}
+		.dot:nth-child(2) {
+		  animation-delay: 0.2s;
+		  background: #64aacc;
+		}
+		.dot:nth-child(3) {
+		  animation-delay: 0.3s;
+		  background: #96aacc;
+		}
+		.dot:nth-child(4) {
+		  animation-delay: 0.4s;
+		  background: #c8aacc;
+		}
+		.dot:nth-child(5) {
+		  animation-delay: 0.5s;
+		  background: #faaacc;
+		}
+		@-moz-keyframes slide {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50% {
+		    opacity: 0.8;
+		    transform: scale(2);
+		  }
+		  100% {
+		    transform: scale(1);
+		  }
+		}
+		@-webkit-keyframes slide {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50% {
+		    opacity: 0.8;
+		    transform: scale(2);
+		  }
+		  100% {
+		    transform: scale(1);
+		  }
+		}
+		@-o-keyframes slide {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50% {
+		    opacity: 0.8;
+		    transform: scale(2);
+		  }
+		  100% {
+		    transform: scale(1);
+		  }
+		}
+		@keyframes slide {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50% {
+		    opacity: 0.8;
+		    transform: scale(2);
+		  }
+		  100% {
+		    transform: scale(1);
+		  }
+		}*/
+		.fram-alert{
+			 position: fixed;
+			 left: 50%;
+			 bottom: 0;
+			 transform: translate(-50%,0%);
+			 top: 0;
+			 background: rgba(49,49,49,0.8);
+			 z-index: 1000;
+		}
+		.fram-alert>div{
+	 	background: #fff;
+    color:#333;
+    font-size: 13px;
+    position: fixed;
+    top:200px;
+    left:50%;
+    border-radius:2px;
+    transform: translate(-50%,0);
+    opacity: 1;
+    transition: all 1s ease;
+    z-index:999;
+    width: calc(100% - 80px);
+}
+.fram-alert>div p{
+	height:86px;
+margin: 0 20px;
+}
+.fram-alert>div p span{
+	display: block;
+	color: #333;
+	height: 43px;
+	line-height: 60px;
+}
+
+.fram-alert>div p span{
+	height: 100%;
+	line-height: 86px;
+}
+.fram-alert>div a{
+	display: block;
+	margin: 0 20px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 2px;
+	margin-bottom: 23px;
+	background:#4285f4;
+
+}
+html{
+	background: #eee;
+}
+
+@media (max-width: 768px){
+	body>div:first-child{
+		max-width:768px;
+		margin: 0 auto;
+	}
+}
+@media (min-width: 769px){
+	body{
+		margin: 0 auto !important;
+	}
+	body>div:first-child{
+		width:100%;
+	}
+}
+#__vconsole{
+	font-size:12px !important;
+}
+.page-load>div,.file-pop>div{
+	min-width: 150px;
+    text-align: center;
+    min-height: 123px;
+    line-height: 123px;
+    background: rgba(51, 51, 51, 0.7);
+    color: #fff;
+    font-size: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 999;
+    max-width: 250px;
+    word-break: break-all;
+}
+.page-load>div img,.file-pop>div img{
+	width: 55px;
+    height: 55px;
+    margin: 19px auto 10px;
+}
+.page-load>div p,.file-pop>div p{
+	color: #fff;
+    font-size: 14px;
+    min-height: 14px;
+    line-height: 14px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.glable-nodata{
+	margin-top: 0 !important;
+    padding-top: 100px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.glable-nodata img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.glable-nodata p{
+	 color: #878787;
+    font-size: 14px;
+    min-height: 14px;
+    line-height: 14px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+html{
+	/*filter:grayscale(100%);*/
+}</style><link rel="stylesheet" type="text/css" href="./健康码_files/font_1630811_dzzwom6jdur.css"><link href="./健康码_files/app.0b10b98436b4f599794b052a74c67433.css" rel="stylesheet"><link data-id="b5261814cbf81368b63bd10fab2d359c" href="./健康码_files/default.main.css" rel="stylesheet" type="text/css"><script type="text/javascript" charset="utf-8" async="" src="./健康码_files/0.9dae0aa845b8625605e7.js.下载"></script><script type="text/javascript" charset="utf-8" async="" src="./健康码_files/412.3f613b030e007690e022.js.下载"></script><link type="image/png" href="./健康码_files/93e2b997d052a1d4f37dc40ea420e53c.png" rel="shortcut icon"></head><body style="width: 100%;"><div class="newQrcode" style="display: block;"><!----> <div><div class="epide_outer"><div class="logo"><div><img src="./健康码_files/93e2b997d052a1d4f37dc40ea420e53c.png" alt=""></div> <span>首都经济贸易大学</span></div> <div class="bjc"><img src="./健康码_files/mengceng2.png" alt=""> <div class="users"><ul><li><span>姓名</span><span id="xm">欧江杭</span></li> <li><span>学工号</span><span id="xh">32018070139</span></li></ul> <ul><li style="width: 100%;"><span>单位</span><span>管理工程学院</span></li></ul></div></div></div> <div class="content mastercontent"><div class="location_tit"><!----> <div class="qrcode-wrap master"><div class="title-master"><span class="left">通行码</span><span class="right"><em>扫码时间：2021-03-22 16:30:07</em></span></div> <div class="code_img qr-box qr-publice buaa_code_img" style="display: none;"><div class="border"><div id="qrcode" style="display: none;"></div> <span>二维码生成中...</span> <span style="display: none;">二维码生成失败，点击重新生成</span></div></div> <p class="code_img_text" style="display: none;">通行失败</p> <div class="bignocode-wrap"><!----> <img src="健康码_files/success.png" alt=""> <!----> <!----> <!----> <p class="">通行成功</p></div></div> <div class="line"></div> <div class="buaaszwz"><div class="szwz-header"><span class="left">所在位置</span> <span class="right">校本部-<span id="nbm">北门</span>（<span id="jck">出口</span>）</span></div></div> <!----> <!----> <div class="line"></div> <div class="other-foot"><span>您的出入校申请时间如下：<br>出校时间 2021-03-21<br>入校时间 2021-03-23</span></div> <!----> <!----> <!----> <!----></div></div></div> <!----> <div data-v-5cdaa929="" class="g-pop" appkey="healthcode" style="width: 450px; display: none;"><div data-v-5cdaa929="" class="pophint"><img data-v-5cdaa929="" src="https://yqapp.cueb.edu.cn/site/epidehealth/masterqrcode?door_id=10&amp;qHjd635W0nuV=1616385589705" alt=""> <p data-v-5cdaa929=""></p></div></div></div><script>if(window.location.href.indexOf("debug=1") !== -1) {
+        var jsScript = document.createElement("script");
+        jsScript.src = "/site/static/js/vconsole.min.js";
+        jsScript.type = "text/javascript";
+        jsScript.async = false;
+        jsScript.onload = function() {
+			
+		  var vConsole = new VConsole();''
+		    // var myPlugin = new VConsole.VConsolePlugin('my_plugin', '上传数据');
+			// myPlugin.on('renderTab', function(callback) {
+			// 	var htmldiv = $("#__vc_log_default").html();
+			// 	// console.log(44444,htmldiv)
+			// 	var html = htmldiv;
+			// 	callback(html);
+			// });
+		    // myPlugin.on('addTool', function(callback) {
+			// 	var button = {
+			// 		name: 'Reload',
+			// 		onClick: function(event) {
+			// 			location.reload();
+			// 		}
+			// 	};
+			// 	callback([button]);
+			// });
+		//   vConsole.addPlugin(myPlugin);
+        };
+        document.getElementsByTagName("body")[0].appendChild(jsScript);
+    }</script><script type="text/javascript" src="./王冕健康码_files/manifest.9a4523bd8779c725f1a3.js.下载"></script><script type="text/javascript" src="./王冕健康码_files/vendor.70d1a02dbdedb11c13e7.js.下载"></script><script type="text/javascript" src="./王冕健康码_files/app.312fd89f97325a163337.js.下载"></script><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="Close (Esc)" class="pswp__button pswp__button--close"></button> <button title="Share" class="pswp__button pswp__button--share"></button> <button title="Toggle fullscreen" class="pswp__button pswp__button--fs"></button> <button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button> <button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div><div id="progress_loading" style="display: none;"><div style="width: 0%;"></div></div><script src="./王冕健康码_files/qrcode.js.下载" data-id="b0d9e47e1cc37e75b87372f8915aa255" type="text/javascript"></script><script src="./王冕健康码_files/normal_socket.js.下载" data-id="0cd144b1fde6a8298de6e05f2164b204" type="text/javascript"></script><script src="./王冕健康码_files/md5.js.下载"></script><script src="./王冕健康码_files/getscript.js.下载"></script><script type="text/javascript">(function() {
+  	// env.js需要，不要删
+ //  	if(localStorage.getItem('envinfo')!=null){
+ //  		console.log(2222,localStorage.getItem('envinfo'))
+ //  		var envinfo=JSON.parse(localStorage.getItem('envinfo'));
+ //  		if(envinfo.env == 'app' && (envinfo.bgColor!='' || envinfo.fontSize!='' || envinfo.fontFamily!='')){
+	//       	if(envinfo.bgColor && envinfo.bgColor!=''){
+	//           	$("body").css('cssText','background-color:'+envinfo.bgColor+'!important');
+	//       	}
+	//       	if(envinfo.fontSize && envinfo.fontSize!=''){
+	//           	$("body").css("font-size",''+envinfo.fontSize+'')
+	//       	}
+	//       	if(envinfo.fontFamily && envinfo.fontFamily!=''){
+	//           	$("body").css("font-family",''+envinfo.fontFamily+'')
+	//       	}
+	// 	}
+
+	// }else{
+	// 	var oScript1 = document.createElement('script');
+	// 	oScript1.type = 'text/javascript';
+	// 	oScript1.async = true;
+
+	// 	oScript1.src = '/site/static/js/jweixin-1.3.2.js';
+	// 	document.body.appendChild(oScript1);
+	//   	var oScript = document.createElement('script');
+	// 	oScript.type = 'text/javascript';
+	// 	oScript.async = true;
+	// 	oScript.src = '/site/static/js/env.js';
+	// 	document.body.appendChild(oScript);
+	// }
+    // function IEVersion()
+    // {
+    //   var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    //   var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+    //   var isEdge = userAgent.indexOf("Windows NT 6.1; Trident/7.0;") > -1 && !isIE; //判断是否IE的Edge浏览器
+    //   if(isIE)
+    //   {
+    //     return 'ie'
+    //   }
+    //   else if(isEdge)
+    //   {
+    //     return "Edge";
+    //   }
+    //   else
+    //   {
+    //     return "-1";//非IE
+    //   }
+    // }
+		function IEVersion() {
+      var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+      var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+      var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+      if (isIE) {
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        if (fIEVersion == 7) {
+          return 7;
+        } else if (fIEVersion == 8) {
+          return 8;
+        } else if (fIEVersion == 9) {
+          return 9;
+        } else if (fIEVersion == 10) {
+          return 10;
+        } else {
+          return 6;//IE版本<=7
+        }
+      } else if (isEdge) {
+        return 'edge';//edge
+      } else if (isIE11) {
+        return 11; //IE11
+      } else {
+        return false;//不是ie浏览器
+      }
+		}
+		if (IEVersion() && IEVersion() != 'edge'){
+			if (window.location.href.indexOf('leaveshoolsq') > -1){
+				document.body.innerHTML ='<div style="font-size: 20px;text-align: center;margin: 300px auto;">为了更好的浏览效果，请您使用较新版本的Chrome、Firefox、Safari进行访问</div>'
+    	}
+      }
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+      handleFontSize();
+    } else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+      }
+    }
+    function handleFontSize() {
+      WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+      WeixinJSBridge.on('menu:setfont', function() {
+        WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+      });
+    }
+  })();</script>
+
+<script>
+	function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+var nb=getQueryVariable("nb")
+var jc=getQueryVariable("jc")
+var xm=getQueryVariable("xm")
+var xh=getQueryVariable("xh")
+var xm1=decodeURI(xm)
+//alert(xm+xh)
+if(nb=="bei"){
+	document.getElementById("nbm").innerHTML="北门"
+}else{
+	document.getElementById("nbm").innerHTML="南门"
+}
+if(jc=="ru"){
+	document.getElementById("jck").innerHTML="入口"
+}else{
+	document.getElementById("jck").innerHTML="出口"
+}
+document.getElementById("xm").innerHTML=xm1;
+document.getElementById("xh").innerHTML=xh;
+
+	
+Date.prototype.Format = function (fmt) { // author: meizz
+  var o = {
+    "M+": this.getMonth() + 1, // 月份
+    "d+": this.getDate(), // 日
+    "h+": this.getHours(), // 小时
+    "m+": this.getMinutes(), // 分
+    "s+": this.getSeconds(), // 秒
+    "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
+    "S": this.getMilliseconds() // 毫秒
+  };
+  if (/(y+)/.test(fmt))
+    fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+  for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+      return fmt;
+}
+document.querySelector("body > div.newQrcode > div:nth-child(1) > div.content.mastercontent > div > div.qrcode-wrap.master > div.title-master > span.right > em").innerText=("扫码时间："+new Date().Format("yyyy-MM-dd hh:mm:ss"))
+
+
+function getDay(num, str) {
+        var today = new Date();
+        var nowTime = today.getTime();
+        var ms = 24*3600*1000*num;
+        today.setTime(parseInt(nowTime + ms));
+        var oYear = today.getFullYear();
+        var oMoth = (today.getMonth() + 1).toString();
+        if (oMoth.length <= 1) oMoth = '0' + oMoth;
+        var oDay = today.getDate().toString();
+        if (oDay.length <= 1) oDay = '0' + oDay;
+        return oYear + str + oMoth + str + oDay;
+    }
+document.querySelector("body > div.newQrcode > div:nth-child(1) > div.content.mastercontent > div > div.other-foot > span").innerText="您的出入校申请时间如下：\n出校时间 "+getDay(-1, '-')+"\n入校时间 "+getDay(+1,'-')
+</script>
+</body></html>

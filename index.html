@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>耗子尾汁</title>
+	</head>
+
+	<body style="text-align: center;">
+		<h1 style="color: red;font-size: 70px;">jkm</h1>
+		<br /><br />
+		<form style="font-size: 30px;">
+			<label style="font-size: 70px;">你tm谁啊？</label><br />
+			<input style="font-size: 70px;" type="text" id="xm" value="" placeholder="姓名" />
+			<br /><br /><br />
+			<label style="font-size: 70px;">你算老几？</label><br />
+			<input style="font-size: 70px;" type="text" id="xh" value="" placeholder="学号" />
+			<br /><br /><br />
+			<label style="font-size: 70px;">你在哪呢？</label>
+			<select style="font-size: 70px;" id="南北门">
+				<option value="bei">北门</option>
+				<option value="nan">南门</option>
+			</select>
+			<br /><br /><br />
+			<label style="font-size: 70px;">你想进去还是出去？</label>
+			<select style="font-size: 70px;" id="进出口">
+				<option value="ru">进去</option>
+				<option value="chu">出去</option>
+			</select>
+			<br /><br /><br />
+			<audio controls>
+
+				<source src="叮.m4a"></source>
+
+			</audio>
+			<button onclick="edg()" style="font-size: 70px;background-color: greenyellow;font-size: 30px;">耗子尾汁</button>
+		</form>
+		<script>
+			function edg() {
+				var nb = document.getElementById("南北门").value
+				var jc = document.getElementById("进出口").value
+				var xm = document.getElementById("xm").value
+				var xh = document.getElementById("xh").value
+				hr = "jkm.html?" + "nb=" + nb + "&jc=" + jc + "&xm=" + xm + "&xh=" + xh;
+				window.location.href = hr
+				window.event.returnValue = false
+			}
+		</script>
+	</body>
+
+</html>
